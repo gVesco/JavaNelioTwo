@@ -2,17 +2,16 @@ package entities;
 
 public class BankAccount {
 
-	private double amount;
 	private double accountBalance;
 	private String accountHolder;
 	private int accountNumber;
 	
-	public double getAmount() {
-		return amount;
-	}
-
 	public double getAccountBalance() {
 		return accountBalance;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
 	}
 
 	public String getAccountHolder() {
@@ -23,11 +22,10 @@ public class BankAccount {
 		this.accountHolder = accountHolder;
 	}
 
-	public BankAccount(int accountNumber, String accountHolder, double amount) {
+	public BankAccount(int accountNumber, String accountHolder, double initialDeposit) {
 		this.accountNumber = accountNumber;
 		this.accountHolder = accountHolder;
-		this.amount = amount;
-		deposit(amount);
+		deposit(initialDeposit);
 	}
 
 	public BankAccount(int accountNumber, String accountHolder) {
