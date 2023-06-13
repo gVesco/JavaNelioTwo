@@ -18,17 +18,18 @@ public class Program {
 		String accountHolder = scn.nextLine();
 
 		System.out.print("Is there an initial deposit (y/n)? ");
-		String isInitialDeposit = scn.nextLine();
+		char isInitialDeposit = scn.next().charAt(0);
 
-		double amount = 0.0;
 		BankAccount bankAccount;
-		if (isInitialDeposit.equals("y")) {
+		if (isInitialDeposit == 'y') {
 			System.out.print("Enter initial deposit value:: ");
-			amount = scn.nextDouble();
-			bankAccount = new BankAccount(accountNumber, accountHolder, amount);
-		} else if (isInitialDeposit.equals("n")) {
+			double initialAmount = scn.nextDouble();
+			bankAccount = new BankAccount(accountNumber, accountHolder, initialAmount);
+		}
+		else if (isInitialDeposit == 'n') {
 			bankAccount = new BankAccount(accountNumber, accountHolder);
-		} else {
+		}
+		else {
 			System.out.println("Invalid value entered, enter 'y' for yes or 'n' for no.");
 			scn.close();
 			return; // Exit the program if invalid input is provided
@@ -38,14 +39,14 @@ public class Program {
 		System.out.println();
 		
 		System.out.print("Enter a deposit value: ");
-		amount = scn.nextDouble();
-		bankAccount.deposit(amount);
+		double depositAmount = scn.nextDouble();
+		bankAccount.deposit(depositAmount);
 		System.out.println("Updated!");
 		System.out.println(bankAccount);
 		
 		System.out.print("Enter a withdraw value: ");
-		amount = scn.nextDouble();
-		bankAccount.withdraw(amount);
+		double withdrawAmount = scn.nextDouble();
+		bankAccount.withdraw(withdrawAmount);
 		System.out.println("Updated!");
 		System.out.println(bankAccount);
 		
