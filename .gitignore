@@ -1,5 +1,24 @@
-/.metadata/
+# Arquivo Gitignore
+*.gitignore
+
+# Arquivos do Eclipse
+.settings/
+.classpath
+.project
+.factorypath
+
+# Cache do Eclipse
 .metadata/
-metadata
-.recommenders/
-.gitignore
+*/.metadata/
+*/bin/
+*/tmp/
+
+# Arquivos de compilação
+*.class
+
+# Arquivos gerados pelo Maven
+target/
+
+# Arquivos gerados pelo Gradle
+build/
+out/
