@@ -1,59 +1,83 @@
-# Arquivo Gitignore
-*.gitignore
-
-# Arquivos do Eclipse
+# Arquivos configuração do Eclipse
 .settings/
 .classpath
 .project
 .factorypath
 
-# Cache do Eclipse
+# Cache e dados temporários do Eclipse
 .metadata/
-/.metadata/
-*/.metadata/
 */bin/
 */tmp/
 
-# Arquivos de compilação
+# Arquivos de classe compilados
 *.class
 
-# Arquivos gerados pelo Maven
+# Arquivos gerados pelo Maven - Artefatos de compilação
 target/
 
-# Arquivos gerados pelo Gradle
+# Arquivos gerados pelo Gradle - Artefatos de compilação
 build/
 out/
 
-
-**/target/
-**/bin/
-**/lib/*.jar
-**/seed/*.jar
-/org.adempiere.ui.zk/labelapplet.jar
-/org.adempiere.extend/test.properties
-
-/PostgreSQL/
-/Oracle/
+# Arquivos de log
 /log/
 /*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Arquivos empacotados
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Arquivos de configuração de lançamento
+swingclient.product*.launch
+server.product*.launch
+
+# Arquivos temporários de sistemas remotos
+/RemoteSystemsTempFiles/
+
+# Arquivos de plug-in de recomendação
+.recommenders
+
+# Servidores de tempo de execução
+/runtime-server.product/
+/jettyhome/
+
+# Arquivos do PostgreSQL e Oracle
+/PostgreSQL/
+/Oracle/
+
+# Arquivos específicos do projeto Adempiere
+/org.adempiere.ui.zk/labelapplet.jar
+/org.adempiere.extend/test.properties
 /.idpass
 /idempiere.properties
 /idempiereEnv.properties
 /hazelcast.xml
-
-swingclient.product*.launch
-server.product*.launch
-
-/RemoteSystemsTempFiles/
-External Plug-in Libraries
-.recommenders
-
-/runtime-server.product/
-/jettyhome/
-
 /org.idempiere.javadoc/API
 /.sonarlint/
 **/org.sonarlint.eclipse.core.prefs
 /runtime-*.app/
 org.idempiere.maven.to.p2/org.idempiere.webservice.client/.settings/
 **/org.eclipse.jdt.core.prefs
+
+# Pastas "target" em qualquer diretório
+**/target/
+
+# Pastas "bin" em qualquer diretório
+**/bin/
+
+# Arquivos JAR na pasta "lib" em qualquer diretório
+**/lib/*.jar
+
+# Arquivos JAR na pasta "seed" em qualquer diretório
+**/seed/*.jar
